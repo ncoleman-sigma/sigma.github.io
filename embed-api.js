@@ -33,14 +33,7 @@ app.get('/api/generate-embed-url', (req, res) => {
         searchParams += '&:ua_Region=Midwest';
         searchParams += '&:account_type=Creator';
         searchParams += '&:mode=userbacked';
-        //searchParams += '&:ff=LOCAL_EVAL_DISABLE';
-        //searchParams += '&:ua_role=NEW_ROLE';
-        //searchParams += '&:showUnderlyingData=false';
-        //searchParams += '&:hide_sheet_interactions=true';
-        //searchParams += '&:lng=en&:lng_variant=en-ndc';
         searchParams += '&:session_length=600';
-        searchParams += `&${encodeURIComponent('p_prod')}=${encodeURIComponent('Computers')}`;
-        //searchParams += `&${encodeURIComponent('Store-Region')}=${encodeURIComponent('East')}`;
         searchParams += `&:time=${Math.floor(new Date().getTime() / 1000)}`;
 
         // 7: Construct the URL with search parameters and generate a signature
