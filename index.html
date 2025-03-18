@@ -9,7 +9,8 @@
 	<h3>iframe URL below comes from API call to server.js</h3>
 	<iframe id="sigmaDashboard" width="100%" height="90%"></iframe>
 	<script>
-		const URL = document.createElement('/api/generate-embed-url');
+		const URL = document.getElementById("gfgFrame").src
+                = "https://ncoleman-sigma.github.io/sigma.github.io/";
 		fetch(URL)
 		.then(data=>{return data.json()})
 		.then(res=>{document.getElementById("sigmaDashboard").src = res.url})
