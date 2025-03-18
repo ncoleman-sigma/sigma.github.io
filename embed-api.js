@@ -1,19 +1,17 @@
-// SIGMA SERVER-SIDE EMBED API - SECURE QUICKSTART
 
-// 1: Require necessary Node.js modules
 const express = require('express');
 const crypto = require('crypto');
 
-// 2: Initialize an Express application
+
 const app = express();
 
-// 3: Manually set your configuration variables here (example values shown)
+
 const EMBED_PATH = 'https://app.sigmacomputing.com/embed/1-2wDc2M6GqIrajkSwjkl0az';
 const EMBED_SECRET = '509b9d5db4b99779fb6e5601aa9f5ee6eb7dd9bb1fbcdf3ac8e6562ef33215aefd986da30e050bcba808238c596122868fcae5d52ce8a7f5d46ac31dd5ab6708';
 const CLIENT_ID = '5ce8a8751bbab522adb392eb3abdabf539ad1b34d4d5abfe1dac8e3dc0a5a79c';
 const PORT = 3000; // Feel free to change the port number as needed
 
-// 4: Server Setup
+
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`); // Serve the main HTML file for the root path
 });
@@ -52,7 +50,7 @@ app.get('/api/generate-embed-url', (req, res) => {
     }
 });
 
-// 9: Start the server
+
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
